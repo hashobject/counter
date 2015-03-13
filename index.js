@@ -3,10 +3,11 @@ var express = require('express');
 var app = express();
 
 
-app.use('/', express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/iframe', function (req, res) {
+  res.type('html');
   res.sendFile(__dirname + '/public/iframe.html');
 });
 
