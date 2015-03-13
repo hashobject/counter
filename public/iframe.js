@@ -27,9 +27,12 @@
   });
 
   // notify parent about current width
-  var button = document.querySelector('.react-count');
   var lastWidth;
   function refresh(){
+    var button = document.querySelector('.react-count');
+    if (!button) {
+      return;
+    }
     var width = button.getBoundingClientRect().width;
     if (top != window && window.postMessage) {
       var but = document.querySelector('.react-count');
