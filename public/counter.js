@@ -57,32 +57,27 @@
 
     // setup iframe RPC
     iframe.onload = function(){
-      // setup(iframe);
-      iframe.style.visibility = 'visible';
+      setup(iframe);
     };
   }
 
-  // setup an "RPC" channel between iframe and us
-  // function setup(iframe){
-  //   var id = Math.random() * (1 << 24) | 0;
-  //   iframe.contentWindow.postMessage('counter:' + id, '*');
-  //   window.addEventListener('message', function(e){
-  //     // show dialog upon click
-  //     if ('counter-click:' + id  == e.data) {
-  //       showDialog(iframe);
-  //     }
+  setup an "RPC" channel between iframe and us
+  function setup(iframe){
+    var id = Math.random() * (1 << 24) | 0;
+    iframe.contentWindow.postMessage('counter:' + id, '*');
+    window.addEventListener('message', function(e){
 
-  //     // update width
-  //     var wp = 'counter-width:' + id + ':';
-  //     if (wp == e.data.substr(0, wp.length)) {
-  //       var width = e.data.substr(wp.length);
-  //       iframe.style.width = width + 'px';
+      // update width
+      var wp = 'counter-width:' + id + ':';
+      if (wp == e.data.substr(0, wp.length)) {
+        var width = e.data.substr(wp.length);
+        iframe.style.width = width + 'px';
 
-  //       // ensure it's shown (since first time hidden)
-  //       iframe.style.visibility = 'visible';
-  //     }
-  //   });
-  // }
+        // ensure it's shown (since first time hidden)
+        iframe.style.visibility = 'visible';
+      }
+    });
+  }
 
   var found = search();
   if (!found) setTimeout(search, 5000);
