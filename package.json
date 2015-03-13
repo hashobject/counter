@@ -1,0 +1,33 @@
+{
+  "name": "counter",
+  "version": "0.1.0",
+  "description": "Counter widget embeddable with one line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hashobject/counter.git"
+  },
+  "keywords": [
+    "counter",
+    "firebase",
+    "react-count"
+  ],
+  "author": "hashobject team (team@hashobject.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hashobject/counter/issues"
+  },
+  "homepage": "https://github.com/hashobject/counter",
+  "dependencies": {
+    "express": "^4.12.2",
+    "react": "^0.12.0",
+    "react-count": "^0.2.3"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.7.3"
+  }
+}
