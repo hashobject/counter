@@ -37,11 +37,11 @@
 
     var iframePath = '/iframe';
     if (script.dataset['counter-type']) {
-      var counterType = script.dataset['counter-type'].value;
+      var counterType = script.dataset['counter-type'];
       iframePath += '?counterType=' + counterType;
     }
     if (script.dataset['counter-text']) {
-      var counterText = script.dataset['counter-text'].value;
+      var counterText = script.dataset['counter-text'];
       iframePath += '?counterText=' + counterText;
     }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
