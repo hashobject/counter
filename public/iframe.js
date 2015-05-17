@@ -26,18 +26,22 @@
 
   // notify parent about current width
   var lastWidth;
+  var lastHeight;
   function refresh(){
     var button = document.querySelector('.react-count');
     if (!button) {
       return;
     }
-    var width = button.getBoundingClientRect().width;
     if (top != window && window.postMessage) {
-      var but = document.querySelector('.react-count');
       var width = Math.ceil(but.getBoundingClientRect().width);
+      var height = Math.ceil(but.getBoundingClientRect().width);
       if (lastWidth != width) {
         lastWidth = width;
         parent.postMessage('counter-width:' + id + ':' + width, '*');
+      }
+      if (lastHeight != height) {
+        lastHeight = height;
+        parent.postMessage('counter-height:' + id + ':' + height, '*');
       }
     }
   }
