@@ -1,5 +1,3 @@
-
-
 (function(){
 
   // give up and resort to `target=_blank`

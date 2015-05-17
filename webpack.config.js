@@ -1,7 +1,9 @@
 module.exports = {
-  entry: "./lib/app.js",
+  entry:  {
+    app: "./lib/app.js"
+  },
   output: {
-    filename: "./public/app.js"
+    filename: "./public/[name].js"
   },
   module: {
     loaders: [
