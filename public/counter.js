@@ -34,9 +34,10 @@
     if (!parent) return;
 
     var iframe = document.createElement('iframe');
-    var counterType = script.attributes['counter-type'].value;
+
     var iframePath = '/iframe';
-    if (counterType) {
+    if (script.attributes['counter-type']) {
+      var counterType = script.attributes['counter-type'].value;
       iframePath += '?counterType=' + counterType;
     }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
