@@ -33,8 +33,8 @@
       return;
     }
     if (top != window && window.postMessage) {
-      var width = Math.ceil(but.getBoundingClientRect().width);
-      var height = Math.ceil(but.getBoundingClientRect().width);
+      var width = Math.ceil(button.getBoundingClientRect().width);
+      var height = Math.ceil(button.getBoundingClientRect().width);
       if (lastWidth != width) {
         lastWidth = width;
         parent.postMessage('counter-width:' + id + ':' + width, '*');
