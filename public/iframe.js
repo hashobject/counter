@@ -41,7 +41,7 @@
       }
       if (lastHeight != height) {
         lastHeight = height;
-        parent.postMessage('counter-height:' + id + ':' + height, '*');
+        parent.postMessage('counter-height:' + id + ':' + height + 8, '*');
       }
     }
   }

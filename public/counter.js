@@ -34,7 +34,11 @@
     if (!parent) return;
 
     var iframe = document.createElement('iframe');
+    var counterType = script.attributes['counter-type'].value;
     var iframePath = '/iframe';
+    if (counterType) {
+      iframePath += '?counterType=' + counterType;
+    }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
     iframe.style.borderWidth = 0;
     iframe.className = '__counter';
