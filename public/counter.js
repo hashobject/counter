@@ -36,12 +36,12 @@
     var iframe = document.createElement('iframe');
 
     var iframePath = '/iframe';
-    if (script.dataset['counter-type']) {
-      var counterType = script.dataset['counter-type'];
+    if (script.dataset.counterType]) {
+      var counterType = script.dataset.counterType;
       iframePath += '?counterType=' + counterType;
     }
-    if (script.dataset['counter-text']) {
-      var counterText = script.dataset['counter-text'];
+    if (script.dataset.counterText) {
+      var counterText = script.dataset.counterText;
       iframePath += '?counterText=' + counterText;
     }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
