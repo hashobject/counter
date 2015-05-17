@@ -36,9 +36,13 @@
     var iframe = document.createElement('iframe');
 
     var iframePath = '/iframe';
-    if (script.attributes['counter-type']) {
-      var counterType = script.attributes['counter-type'].value;
+    if (script.dataset['counter-type']) {
+      var counterType = script.dataset['counter-type'].value;
       iframePath += '?counterType=' + counterType;
+    }
+    if (script.dataset['counter-text']) {
+      var counterText = script.dataset['counter-text'].value;
+      iframePath += '?counterText=' + counterText;
     }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
     iframe.style.borderWidth = 0;
