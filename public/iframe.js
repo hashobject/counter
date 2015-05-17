@@ -34,7 +34,7 @@
     }
     if (top != window && window.postMessage) {
       var width = Math.ceil(button.getBoundingClientRect().width);
-      var height = Math.ceil(button.getBoundingClientRect().width);
+      var height = Math.ceil(button.getBoundingClientRect().height);
       if (lastWidth != width) {
         lastWidth = width;
         parent.postMessage('counter-width:' + id + ':' + width, '*');
