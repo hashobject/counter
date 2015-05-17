@@ -36,7 +36,7 @@
     var iframe = document.createElement('iframe');
 
     var iframePath = '/iframe';
-    if (script.dataset.counterType]) {
+    if (script.dataset.counterType) {
       var counterType = script.dataset.counterType;
       iframePath += '?counterType=' + counterType;
     }
