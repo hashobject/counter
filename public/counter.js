@@ -35,14 +35,14 @@
 
     var iframe = document.createElement('iframe');
 
-    var iframePath = '/iframe';
+    var iframePath = '/iframe?';
     if (script.dataset.counterType) {
       var counterType = script.dataset.counterType;
-      iframePath += '?counterType=' + counterType;
+      iframePath += 'counterType=' + counterType;
     }
     if (script.dataset.counterText) {
       var counterText = script.dataset.counterText;
-      iframePath += '?counterText=' + counterText;
+      iframePath += '&counterText=' + counterText;
     }
     iframe.src = script.src.replace(/\/counter\.js.*/, iframePath);
     iframe.style.borderWidth = 0;
